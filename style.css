@@ -144,6 +144,21 @@ h1 {
     gap: 20px;
     text-align: left;
 }
+footer {
+    background-color: var(--bg); /* Hoặc màu trắng tùy bạn */
+    padding: 60px 20px;
+    text-align: center;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    opacity: 0.6;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Để nội dung chữ trong footer không bị tràn hết chiều ngang laptop */
+footer p {
+    max-width: 600px;
+    margin: 0 auto;
+}
 /* Khi màn hình rộng hơn 1024px (Laptop/Desktop) */
 @media (min-width: 1024px) {
     .logo-main {
