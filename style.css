@@ -1,0 +1,162 @@
+:root {
+    --primary: #2e5d36; /* Xanh rêu */
+    --bg: #fdfaf5;      /* Kem sữa */
+     --text: #1a2e1d;
+}
+body {
+            margin: 0;
+            font-family: 'Optima', 'Georgia', serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            /* Giữ cho nội dung không bị che bởi thanh điều hướng */
+            padding-bottom: 80px; 
+            background-color: var(--bg);
+}
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .logo-main {
+            width: 180px;
+            margin-bottom: 30px;
+            transition: transform 0.3s;
+        }
+        .logo-main:hover { transform: scale(1.05); }
+        h1 {
+            font-weight: 300;
+            letter-spacing: 4px;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        .tagline {
+            font-style: italic;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            color: var(--primary);
+        }
+        .hero-text {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 50px;
+            opacity: 0.9;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        footer {
+            margin-top: 100px;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            opacity: 0.7;
+        }
+    /* CSS bổ sung cho phần Cẩm nang */
+    .guide-section {
+        padding: 60px 20px;
+        background-color: #ffffff; /* Tạo nền trắng nhẹ để phân biệt với phần chào mừng */
+        border-radius: 40px 40px 0 0; /* Bo góc mềm mại kiểu ứng dụng hiện đại */
+        margin-top: 40px;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        margin-top: 30px;
+    }
+    .card {
+        background: var(--bg);
+        padding: 30px;
+        border-radius: 20px;
+        text-align: left;
+        border: 1px solid rgba(46, 93, 54, 0.1);
+        transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-5px); }
+    .card h3 {
+        color: var(--primary);
+        margin-top: 0;
+        font-family: serif;
+    }
+    .card-icon { font-size: 1.5rem; margin-bottom: 15px; display: block; }
+    .wifi-box {
+        background: var(--primary);
+        color: white;
+        padding: 20px;
+        border-radius: 15px;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    /* Thanh thông báo cập nhật */
+#update-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: none; /* Mặc định ẩn đi */
+    z-index: 1000;
+    font-size: 0.9rem;
+    align-items: center;
+    gap: 15px;
+}
+#update-banner button {
+    background: white;
+    color: var(--primary);
+    border: none;
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+/* Thanh điều hướng dưới cùng */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background: rgba(253, 250, 245, 0.85); /* Màu kem mờ */
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid rgba(46, 93, 54, 0.1);
+    z-index: 999;
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+.nav-item {
+    text-decoration: none;
+    color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.75rem;
+    gap: 4px;
+    opacity: 0.6;
+}
+
+.nav-item.active { opacity: 1; font-weight: bold; }
+

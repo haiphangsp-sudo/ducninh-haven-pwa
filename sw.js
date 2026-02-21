@@ -1,10 +1,12 @@
-const CACHE_NAME = 'ducninh-haven-v4';
+const CACHE_NAME = 'ducninh-haven-v5';
 const assets = [
   '/',
   '/index.html',
+  '/style.css',
   '/manifest.json',
   '/logo-192.png',
-  '/logo-512.png'
+  '/logo-512.png',
+  '/image_4.jpg'
 ];
 
 // Cài đặt Service Worker và lưu trữ tài nguyên vào bộ nhớ đệm
