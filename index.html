@@ -58,27 +58,17 @@
         </div>
     </footer>
     <script>
-    if ('serviceWorker' in navigator) {
+        if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js').then(reg => {
-            // Khi phát hiện có bản cập nhật mới
             reg.addEventListener('updatefound', () => {
                 const newWorker = reg.installing;
                 newWorker.addEventListener('statechange', () => {
+                    // Chỉ hiện nút khi bản mới đã sẵn sàng
                     if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                        // Hiện thông báo cho người dùng
                         document.getElementById('update-banner').style.display = 'flex';
                     }
                 });
             });
-        });
-
-        // QUAN TRỌNG: Tự động F5 khi Service Worker mới nắm quyền
-        let refreshing = false;
-        navigator.serviceWorker.addEventListener('controllerchange', () => {
-            if (!refreshing) {
-                window.location.reload();
-                refreshing = true;
-            }
         });
     }
     </script>
