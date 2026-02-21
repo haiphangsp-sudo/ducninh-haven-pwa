@@ -144,3 +144,15 @@ h1 {
     gap: 20px;
     text-align: left;
 }
+/* Khi màn hình rộng hơn 1024px (Laptop/Desktop) */
+@media (min-width: 1024px) {
+    .logo-main {
+        max-width: 800px; /* Giới hạn ảnh Hero lại một chút cho tinh tế */
+        border-radius: 40px;
+    }
+    
+    .grid {
+        grid-template-columns: repeat(3, 1fr); /* Chia 3 cột thay vì xếp chồng */
+        gap: 30px;
+    }
+}

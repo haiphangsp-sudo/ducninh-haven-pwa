@@ -17,7 +17,13 @@
             dành riêng cho nghệ thuật sống chậm và trị liệu bằng thảo mộc.
         </p>
         <a href="tel:0867105107" class="btn">Reserve Your Stay</a>
-        <section class="guide-section" id="guide">
+       
+        <div id="update-banner">
+        <span>Có nội dung mới từ Haven</span>
+        <button onclick="window.location.reload(true)">Cập nhật ngay</button>
+        </div>
+    </div>
+    <section class="guide-section" id="guide">
         <h2 style="font-family: serif; font-weight: 300;">Hành trình tại Haven</h2>
         <p style="opacity: 0.7; margin-bottom: 30px;">Chạm vào di sản qua từng góc nhỏ</p>
 
@@ -44,15 +50,10 @@
             </div>
         </div>
     
-        </section>
-        <div id="update-banner">
-        <span>Có nội dung mới từ Haven</span>
-        <button onclick="window.location.reload(true)">Cập nhật ngay</button>
-        </div>
-        <footer>
+    </section>
+    <footer>
             &copy; 2026 DUC NINH HAVEN. QUANG BINH, VIETNAM.
-        </footer>
-    </div>
+    </footer>
     <script>
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js').then(reg => {
