@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ducninh-haven-v3';
+const CACHE_NAME = 'ducninh-haven-v4';
 const assets = [
   '/',
   '/index.html',
