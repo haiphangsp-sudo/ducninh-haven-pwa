@@ -86,3 +86,52 @@ body {
 }
 
 .nav-item.active { opacity: 1; font-weight: bold; }
+/* Bổ sung khung bao quanh để nội dung không chạm mép màn hình */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Định dạng cho ảnh Logo/Hero chính */
+.logo-main {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* Định dạng chữ */
+h1 {
+    font-family: serif;
+    font-weight: 300;
+    margin-bottom: 5px;
+    color: var(--primary);
+}
+
+.tagline {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    opacity: 0.6;
+    margin-bottom: 20px;
+}
+
+/* Nút bấm đặt phòng */
+.btn {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+/* Hệ thống lưới cho các thẻ (Cards) */
+.grid {
+    display: grid;
+    gap: 20px;
+}
