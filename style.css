@@ -91,15 +91,18 @@ body {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
+    text-align: center;
 }
 
 /* Định dạng cho ảnh Logo/Hero chính */
 .logo-main {
     width: 100%;
+    max-width: 100%;
     height: auto;
-    border-radius: 20px;
-    margin-bottom: 20px;
+    border-radius: 30px;
+    margin-bottom: 25px;
     display: block;
+    box-flex: 0 15px 35px rgba(46, 93, 54, 0.1);
 }
 
 /* Định dạng chữ */
@@ -108,8 +111,13 @@ h1 {
     font-weight: 300;
     margin-bottom: 5px;
     color: var(--primary);
+    margin: 10px 0;
 }
-
+.hero-text {
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
 .tagline {
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -134,4 +142,5 @@ h1 {
 .grid {
     display: grid;
     gap: 20px;
+    text-align: left;
 }
