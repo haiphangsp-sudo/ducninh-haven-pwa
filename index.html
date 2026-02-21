@@ -20,72 +20,70 @@
         </p>
 
         <a href="#" class="btn">Reserve Your Stay</a>
-        <section class="guide-section" id="guide">
-            <div class="container">
-            <h2 style="font-family: serif; font-weight: 300;">Haven Guide</h2>
-            <p style="opacity: 0.7;">Tiện ích dành riêng cho kỳ nghỉ của bạn</p>
+<section class="guide-section" id="guide">
+    <div class="container">
+        <h2 style="font-family: serif; font-weight: 300;">Hành trình tại Haven</h2>
+        <p style="opacity: 0.7; margin-bottom: 30px;">Chạm vào di sản qua từng góc nhỏ</p>
 
-            <div class="wifi-box">
-            <div>
-                <small>Wifi Network</small>
-                <div style="font-weight: bold;">Duc Ninh Haven</div>
-            </div>
-            <div>
-                <small>Password</small>
-                <div style="font-weight: bold;">123456a@</div>
-            </div>
-        </div>
-
-            <div class="grid">
+        <div class="grid">
             <div class="card">
                 <span class="card-icon">🌿</span>
-                <h3>Rosemary (Hương thảo)</h3>
-                <p>Mùi hương của sự minh mẫn. Chúng tôi trồng hương thảo dọc các lối đi để mỗi bước chân của bạn đều mang theo sự tươi mới và năng lượng.</p>
+                <h3>Hương tự nhiên</h3>
+                <p>Những nốt hương dẫn lối tâm hồn tại vườn Haven:</p>
+                <ul style="padding-left: 20px; font-size: 0.9rem; opacity: 0.8;">
+                    <li><strong>Mộc Hương:</strong> Mùi hương của ký ức, ngọt ngào và tĩnh lặng.</li>
+                    <li><strong>Xạ Hương:</strong> Chút nồng nàn giúp thông tuệ và tỉnh thức.</li>
+                    <li><strong>Hương Thảo:</strong> Sự tươi mát xoa dịu mọi căng thẳng.</li>
+                </ul>
             </div>
 
             <div class="card">
-                <span class="card-icon">🌱</span>
-                <h3>Thyme (Cỏ xạ hương)</h3>
-                <p>Thảo mộc đặc trưng trong các món trà chiều tại Haven, giúp hỗ trợ hệ hô hấp.</p>
+                <span class="card-icon">💧</span>
+                <h3>Sân giếng</h3>
+                <p>Trái tim của ngôi nhà di sản. Nơi tiếng nước rơi khơi gợi sự mát lành và là điểm tụ hội khí trời, mang lại sự cân bằng tuyệt đối cho thực khách.</p>
             </div>
 
             <div class="card">
-                <span class="card-icon">📞</span>
-                <h3>Cần hỗ trợ?</h3>
-                <p>Chúng tôi luôn có mặt. Nhấn để gọi bộ phận quản gia hoặc nhắn tin Zalo.</p>
-                <a href="tel:0867105107" style="color: var(--primary); font-weight: bold;">0867 105 107</a>
+                <span class="card-icon">⛩️</span>
+                <h3>Pergola</h3>
+                <p>Khoảng không gian mở dưới những tán dây leo. Nơi lý tưởng để bạn ngồi lại, thưởng một tách trà chiều và cảm nhận nhịp sống chậm rãi trôi qua.</p>
             </div>
-            </div>
-
-            </div>
-        </section>
-
+        </div>
+    </div>
+</section>
         <div id="update-banner">
         <span>Có nội dung mới từ Haven</span>
-        <button onclick="window.location.reload()">Cập nhật ngay</button>
+        <button onclick="window.location.reload(true)">Cập nhật ngay</button>
         </div>
         <footer>
             &copy; 2026 DUC NINH HAVEN. QUANG BINH, VIETNAM.
         </footer>
     </div>
-
     <script>
-    let newWorker;
-
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js').then(reg => {
+            // Khi phát hiện có bản cập nhật mới
             reg.addEventListener('updatefound', () => {
-                newWorker = reg.installing;
+                const newWorker = reg.installing;
                 newWorker.addEventListener('statechange', () => {
-                    // Khi bản mới đã tải xong và sẵn sàng
                     if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                        // Hiện thông báo cho người dùng
                         document.getElementById('update-banner').style.display = 'flex';
                     }
                 });
             });
         });
+
+        // QUAN TRỌNG: Tự động F5 khi Service Worker mới nắm quyền
+        let refreshing = false;
+        navigator.serviceWorker.addEventListener('controllerchange', () => {
+            if (!refreshing) {
+                window.location.reload();
+                refreshing = true;
+            }
+        });
     }
-    </script>
+</script>
     <nav class="bottom-nav">
     <a href="#" class="nav-item active"><span>🏠</span><span>Trang chủ</span></a>
     <a href="#guide" class="nav-item"><span>🌿</span><span>Cẩm nang</span></a>
