@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duc Ninh Haven | Boutique Hideaway & Wellness</title>
+    <link rel="manifest" href="manifest.json">
+    <style>
+        :root {
+            --primary: #2e5d36; /* Màu xanh rêu từ logo */
+            --bg: #f6f1e3;      /* Màu kem từ logo */
+            --text: #1a2e1d;
+        }
+        body {
+            margin: 0;
+            font-family: 'Optima', 'Georgia', serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .logo-main {
+            width: 180px;
+            margin-bottom: 30px;
+            transition: transform 0.3s;
+        }
+        .logo-main:hover { transform: scale(1.05); }
+        h1 {
+            font-weight: 300;
+            letter-spacing: 4px;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        .tagline {
+            font-style: italic;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            color: var(--primary);
+        }
+        .hero-text {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 50px;
+            opacity: 0.9;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        footer {
+            margin-top: 100px;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            opacity: 0.7;
+        }
+    /* CSS bổ sung cho phần Cẩm nang */
+    .guide-section {
+        padding: 60px 20px;
+        background-color: #ffffff; /* Tạo nền trắng nhẹ để phân biệt với phần chào mừng */
+        border-radius: 40px 40px 0 0; /* Bo góc mềm mại kiểu ứng dụng hiện đại */
+        margin-top: 40px;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        margin-top: 30px;
+    }
+    .card {
+        background: var(--bg);
+        padding: 30px;
+        border-radius: 20px;
+        text-align: left;
+        border: 1px solid rgba(46, 93, 54, 0.1);
+        transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-5px); }
+    .card h3 {
+        color: var(--primary);
+        margin-top: 0;
+        font-family: serif;
+    }
+    .card-icon { font-size: 1.5rem; margin-bottom: 15px; display: block; }
+    .wifi-box {
+        background: var(--primary);
+        color: white;
+        padding: 20px;
+        border-radius: 15px;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    /* Thanh thông báo cập nhật */
+#update-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: none; /* Mặc định ẩn đi */
+    z-index: 1000;
+    font-size: 0.9rem;
+    align-items: center;
+    gap: 15px;
+}
+#update-banner button {
+    background: white;
+    color: var(--primary);
+    border: none;
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="image_4.png" alt="Duc Ninh Haven" class="logo-main">
+        
+        <h1>Duc Ninh Haven</h1>
+        <div class="tagline">designed for slowness</div>
+
+        <p class="hero-text">
+            Nơi di sản giao thoa cùng sự chữa lành. Một không gian được phục hồi từ những ký ức cũ, 
+            dành riêng cho nghệ thuật sống chậm và trị liệu bằng thảo mộc.
+        </p>
+
+        <a href="#" class="btn">Reserve Your Stay</a>
+        <section class="guide-section">
+            <div class="container">
+            <h2 style="font-family: serif; font-weight: 300;">Haven Guide</h2>
+            <p style="opacity: 0.7;">Tiện ích dành riêng cho kỳ nghỉ của bạn</p>
+
+            <div class="wifi-box">
+            <div>
+                <small>Wifi Network</small>
+                <div style="font-weight: bold;">DucNinhHaven_Guest</div>
+            </div>
+            <div>
+                <small>Password</small>
+                <div style="font-weight: bold;">slowness2026</div>
+            </div>
+        </div>
+
+            <div class="grid">
+            <div class="card">
+                <span class="card-icon">🌿</span>
+                <h3>Rosemary (Hương thảo)</h3>
+                <p>Mùi hương giúp xoa dịu tâm trí. Bạn có thể tìm thấy chúng dọc lối đi vào nhà chính.</p>
+            </div>
+
+            <div class="card">
+                <span class="card-icon">🌱</span>
+                <h3>Thyme (Cỏ xạ hương)</h3>
+                <p>Thảo mộc đặc trưng trong các món trà chiều tại Haven, giúp hỗ trợ hệ hô hấp.</p>
+            </div>
+
+            <div class="card">
+                <span class="card-icon">📞</span>
+                <h3>Cần hỗ trợ?</h3>
+                <p>Chúng tôi luôn có mặt. Nhấn để gọi bộ phận quản gia hoặc nhắn tin Zalo.</p>
+                <a href="tel:0123456789" style="color: var(--primary); font-weight: bold;">0123 456 789</a>
+            </div>
+            </div>
+
+            </div>
+        </section>
+
+        <div id="update-banner">
+        <span>Có nội dung mới từ Haven</span>
+        <button onclick="window.location.reload()">Cập nhật ngay</button>
+        </div>
+        <footer>
+            &copy; 2026 DUC NINH HAVEN. QUANG BINH, VIETNAM.
+        </footer>
+    </div>
+
+    <script>
+    let newWorker;
+
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js').then(reg => {
+            reg.addEventListener('updatefound', () => {
+                newWorker = reg.installing;
+                newWorker.addEventListener('statechange', () => {
+                    // Khi bản mới đã tải xong và sẵn sàng
+                    if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                        document.getElementById('update-banner').style.display = 'flex';
+                    }
+                });
+            });
+        });
+    }
+    </script>
+</body>
+</html>
