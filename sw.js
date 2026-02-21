@@ -1,4 +1,4 @@
-const CACHE_NAME = '11'; // Nhớ tăng số phiên bản
+const CACHE_NAME = 'ducninh-haven-v12'; // Nhớ tăng số phiên bản
 const assets = [
   '/',
   '/index.html',

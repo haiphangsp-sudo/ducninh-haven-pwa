@@ -144,18 +144,27 @@ h1 {
     gap: 20px;
     text-align: left;
 }
-footer {
-    background-color: var(--bg); /* Hoặc màu trắng tùy bạn */
-    padding: 60px 20px;
-    text-align: center;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    opacity: 0.6;
-    border-top: 1px solid rgba(0,0,0,0.05);
-}
-
 /* Để nội dung chữ trong footer không bị tràn hết chiều ngang laptop */
 footer p {
+    max-width: 600px;
+    margin: 0 auto;
+}
+footer {
+    text-align: center;
+    color: var(--primary);
+    border-top: 1px solid rgba(46, 93, 54, 0.05);
+    margin-top: 40px;
+    line-height: 2;
+    padding: 40px 20px 110px 20px; /* Padding dưới lớn để né thanh điều hướng */
+    font-size: 0.7rem;
+    letter-spacing: 2px; /* Giãn chữ kiểu sang trọng */
+    color: var(--primary);
+    opacity: 0.4;
+    text-transform: uppercase;
+}
+
+/* Đảm bảo Footer cũng có một lớp container bên trong để không bị tràn lề Laptop */
+footer .container {
     max-width: 600px;
     margin: 0 auto;
 }
