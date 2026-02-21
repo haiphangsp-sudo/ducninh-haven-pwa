@@ -1,7 +1,10 @@
+html {
+    scroll-behavior: smooth;
+}
 :root {
     --primary: #2e5d36; /* Xanh rêu */
-    --bg: #fdfaf5;      /* Kem sữa */
-     --text: #1a2e1d;
+    --bg: #ffffff; /* Đổi từ #fdfaf5 sang trắng để khớp với logo */
+    --text: #1a2e1d;
 }
 body {
             margin: 0;
@@ -145,6 +148,8 @@ body {
     border-top: 1px solid rgba(46, 93, 54, 0.1);
     z-index: 999;
     padding-bottom: env(safe-area-inset-bottom);
+    height: auto; /* Để chiều cao tự thích ứng */
+    padding-top: 10px;
 }
 
 .nav-item {
